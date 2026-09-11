@@ -76,7 +76,7 @@ export const projects: Project[] = [
       fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/LA_UI',
-    liveUrl: 'https://laween-alsulaivany.github.io/LA_UI/',
+    liveUrl: 'https://laween.dev/LA_UI/',
     order: 4,
   },
   {
