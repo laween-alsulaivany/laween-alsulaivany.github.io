@@ -1,0 +1,43 @@
+---
+import { profile } from '../data/profile';
+
+---
+
+<section id="home" class="portfolio-hero" aria-labelledby="home-title">
+  <!-- hero introduction -->
+  <div class="portfolio-hero-copy">
+    <!-- hero greeting -->
+    <p class="portfolio-hero-eyebrow la-muted la-m-0 la-mb-3">Hello visitor, my name is</p>
+    <!-- hero name -->
+    <h1 id="home-title" class="portfolio-hero-title"><span>Laween</span> Al-Sulaivany</h1>
+    <!-- hero description -->
+    <p class="portfolio-hero-description">I like figuring out how things work,
+    <br />finding what could be better,
+    <br />and making it better.</p>
+    <!-- hero action -->
+    <div class="la-button-row">
+      <a class="la-btn la-btn-secondary" href={profile.github}>GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <!-- hero artwork -->
+  <svg class="portfolio-hero-art" viewBox="0 0 720 320" preserveAspectRatio="xMaxYMid slice" fill="none" aria-hidden="true" focusable="false">
+    <!-- artwork fade mask -->
+    <defs>
+      <radialGradient id="hero-fade" cx="76%" cy="50%" r="52%">
+        <stop offset="0" stop-color="white" stop-opacity="0.55" />
+        <stop offset="0.55" stop-color="white" stop-opacity="0.25" />
+        <stop offset="1" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+      <mask id="hero-mask"><rect width="720" height="320" fill="url(#hero-fade)" /></mask>
+    </defs>
+    <!-- artwork geometry -->
+    <g mask="url(#hero-mask)" stroke-width="1">
+      <g stroke="currentColor">
+        <rect x="400" y="48" width="224" height="224" />
+        <circle cx="512" cy="160" r="112" />
+        <path d="M352 160h320M512 0v320" opacity="0.35" />
+      </g>
+      <path d="M512 48a112 112 0 0 1 112 112" stroke="var(--la-brand)" stroke-width="1.5" opacity="0.65" />
+    </g>
+  </svg>
+</section>

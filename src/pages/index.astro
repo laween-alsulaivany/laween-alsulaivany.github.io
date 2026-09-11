@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppShell from '../components/AppShell.astro';
+import Hero from '../components/Hero.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+---
+
+<BaseLayout>
+  <AppShell currentPage="home">
+    <!-- homepage hero -->
+    <Hero />
+    <!-- featured projects -->
+    <ProjectGrid featured />
+  </AppShell>
+</BaseLayout>
