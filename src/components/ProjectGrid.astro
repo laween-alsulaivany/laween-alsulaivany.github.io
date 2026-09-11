@@ -8,7 +8,7 @@ interface Props {
 
 const { featured = false } = Astro.props;
 const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
-const visibleProjects = featured ? orderedProjects.slice(0, 4) : orderedProjects;
+const visibleProjects = featured ? orderedProjects.slice(0, 5) : orderedProjects;
 const Heading = featured ? 'h2' : 'h1';
 ---
 
@@ -20,7 +20,13 @@ const Heading = featured ? 'h2' : 'h1';
     {featured && <a class="la-btn la-btn-link" href="/projects/">View all projects</a>}
   </div>
   <!-- project cards -->
-<div class="la-card-grid portfolio-project-grid">
+<div
+  class:list={[
+    'la-card-grid',
+    'portfolio-project-grid',
+    featured && 'portfolio-project-grid--featured',
+  ]}
+>
     {visibleProjects.map((project) => <ProjectCard project={project} />)}
   </div>
 </div>
