@@ -2,9 +2,23 @@
 import { profile } from '../data/profile';
 ---
 
-<div>
+<div class="la-stack">
   <!-- about copy -->
   <div class="la-content--prose">
     {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+  <!-- profile links -->
+  <div class="la-stack">
+    <p class="la-ink">
+      Connect with me on LinkedIn or explore my work on GitHub.
+    </p>
+    <div class="la-button-row">
+      <a class="la-btn la-btn-primary" href={profile.linkedin}>
+        LinkedIn
+      </a>
+      <a class="la-btn la-btn-secondary" href={profile.github}>
+        GitHub
+      </a>
+    </div>
   </div>
 </div>
