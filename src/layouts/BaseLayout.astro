@@ -1,0 +1,36 @@
+---
+import '../../vendor/LA_UI/app.css';
+import '../styles/portfolio.css';
+
+interface Props {
+  pageTitle?: string;
+}
+
+const { pageTitle } = Astro.props;
+const title = pageTitle ? `${pageTitle} | Laween Al-Sulaivany` : 'Laween Al-Sulaivany | Software Developer';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const description = 'I like figuring out how things work, finding what could be better, and then make it better.';
+---
+
+<!doctype html>
+<html lang="en" data-theme="portfolio-dark">
+  <head>
+    <!-- document metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#11171d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <!-- social sharing metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- route content -->
+    <slot />
+  </body>
+</html>

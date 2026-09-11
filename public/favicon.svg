@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="-21 -10.5 128 128" role="img" aria-label="Laween Al-Sulaivany brand mark">
+  <defs>
+    <mask id="la-brandmark-a-notch" maskUnits="userSpaceOnUse" x="0" y="0" width="86" height="107">
+      <rect x="0" y="0" width="86" height="107" fill="white"/>
+      <path fill="black" d="M50 66c0-2.2 1.8-4 4-4h5c2.2 0 4 1.8 4 4v12H50V66Z"/>
+    </mask>
+  </defs>
+
+  <rect x="-21" y="-10.5" width="128" height="128" rx="12" fill="#11171d"/>
+  <g fill="#56a5ff">
+    <rect x="0" y="0" width="25" height="77" rx="5" ry="5"/>
+    <rect x="30" y="0" width="56" height="37" rx="5" ry="5"/>
+    <rect x="30" y="42" width="56" height="35" rx="5" ry="5" mask="url(#la-brandmark-a-notch)"/>
+    <rect x="0" y="82" width="86" height="25" rx="3" ry="3"/>
+  </g>
+</svg>

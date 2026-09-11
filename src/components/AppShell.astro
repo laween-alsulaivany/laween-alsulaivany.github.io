@@ -1,0 +1,83 @@
+---
+import { profile } from '../data/profile';
+
+interface Props {
+  currentPage: 'home' | 'education-experience' | 'projects' | 'about';
+}
+
+const { currentPage } = Astro.props;
+const pages = [
+  { id: 'home', href: '/', label: 'Home'},
+  { id: 'education-experience', href: '/education-experience/', label: 'Education & Experience'},
+  { id: 'projects', href: '/projects/', label: 'Projects'},
+  { id: 'about', href: '/about/', label: 'About me'},
+];
+const current = pages.find((page) => page.id === currentPage)!;
+---
+
+<!-- skip link -->
+<a class="la-skip-link" href="#main">Skip to content</a>
+<div class="la-app portfolio-shell">
+  <!-- sidebar -->
+  <aside class="la-sidebar">
+    <!-- brand lockup -->
+    <a class="la-brandlockup" href="/" aria-label={`${profile.name}, Home`}>
+      <img class="la-brandmark" src="/brand-mark.svg" width="86" height="107" alt="" />
+      <span class="la-brandtext">
+        <span class="la-brandname">{profile.name}</span>
+        <span class="la-brandnote">{profile.role}</span>
+      </span>
+    </a>
+    <!-- primary navigation -->
+    <nav class="la-nav-section" aria-label="Main navigation">
+      <div class="la-nav">
+        {pages.map(({ id, href, label }) => (
+          <a class="la-nav-link la-nav-link--plain" href={href} aria-current={id === currentPage ? 'page' : undefined}>
+            <span class="la-nav-label">{label}</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  </aside>
+  <div class="la-main">
+    <!-- top bar -->
+    <header class="la-topbar">
+      <!-- current page breadcrumb -->
+      <nav class="la-breadcrumbs" aria-label="Breadcrumb">
+        <a class="portfolio-home-link" href="/" aria-label="Home">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7" />
+          </svg>
+        </a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{current.label}</span>
+      </nav>
+    </header>
+    <!-- route content -->
+    <main id="main" class="portfolio-page-scroll" tabindex="-1">
+      <div class="la-content la-content--wide">
+        <slot />
+      </div>
+    </main>
+  </div>
+  <!-- site footer -->
+  <footer class="la-site-footer">
+    <div class="la-site-footer-inner">
+      <!-- external profile links -->
+      <div class="la-site-footer-links">
+        <a href={profile.github}>GitHub</a>
+        <a href={profile.linkedin}>LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<style>
+  .portfolio-shell .la-nav-link--plain {
+    padding: var(--la-3) var(--la-6);
+  }
+
+  .la-brandmark {
+    object-fit: contain;
+  }
+</style>

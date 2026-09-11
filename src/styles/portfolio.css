@@ -1,0 +1,223 @@
+/* Portfolio app shell */
+.portfolio-shell {
+    height: 100dvh;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.portfolio-shell .la-sidebar {
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: var(--la-8) var(--la-4);
+}
+
+.portfolio-shell .la-main {
+    min-height: 0;
+    grid-template-rows: auto minmax(0, 1fr);
+}
+
+.portfolio-page-scroll {
+    min-height: 0;
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+
+.portfolio-shell > .la-site-footer {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    padding-block: var(--la-3);
+}
+
+.portfolio-home-link {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--la-radius-xs);
+}
+
+.portfolio-home-link:hover {
+    background: var(--la-surface-hover);
+}
+
+.portfolio-shell .la-brandname {
+    font-size: var(--la-text-base);
+}
+
+.portfolio-shell .la-brandnote {
+    margin-top: var(--la-1);
+    font-size: var(--la-text-sm);
+}
+
+.portfolio-shell .la-topbar {
+    min-height: 46px;
+    background: var(--la-surface-subtle);
+}
+
+
+/* HERO START */
+
+.portfolio-hero {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: var(--la-6);
+    padding-block: var(--la-6) var(--la-8);
+    border-bottom: 1px solid var(--la-border);
+}
+
+.portfolio-hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.portfolio-hero-eyebrow {
+    font-size: var(--la-text-xs);
+}
+
+.portfolio-hero-title {
+    margin: 0 0 var(--la-3);
+    font-size: clamp(2rem, 3.2vw, 3.25rem);
+    line-height: 1.08;
+}
+
+.portfolio-hero-title span {
+    color: var(--la-brand);
+}
+
+.portfolio-hero-description {
+    max-width: 55ch;
+    margin: 0 0 var(--la-5);
+    color: var(--la-ink-soft);
+    font-size: var(--la-text-lg);
+}
+
+.portfolio-hero-art {
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    right: 0;
+    width: min(70%, 800px);
+    height: 100%;
+    color: var(--la-border-strong);
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .portfolio-hero {
+        padding-block: var(--la-3) var(--la-6);
+    }
+
+    .portfolio-hero-art {
+        opacity: 0.35;
+        width: 60%;
+    }
+}
+
+
+/* HERO END */
+
+
+
+
+.portfolio-project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--la-3);
+}
+
+.portfolio-project-image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--la-border);
+    border-radius: var(--la-radius-xs);
+    background: var(--la-page);
+}
+
+.portfolio-project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-project-image--contain {
+    object-fit: contain;
+}
+
+.portfolio-project-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: var(--la-4) var(--la-1) var(--la-1);
+}
+
+.portfolio-project-description {
+    margin: var(--la-3) 0 var(--la-5);
+    color: var(--la-ink-soft);
+}
+
+.portfolio-project-actions {
+    margin-top: auto;
+}
+
+.portfolio-project-grid {
+    align-items: stretch;
+}
+
+
+.portfolio-timeline {
+    margin-top: var(--la-1);
+}
+
+.portfolio-timeline li:not(:last-child)::before {
+    top: 39px;
+    bottom: -20px;
+        transform: translateX(-50%);
+
+}
+
+.portfolio-timeline .la-timeline-dot {
+    margin-top: 1.20rem;
+}
+
+
+
+
+@media (max-width: 980px) {
+    .portfolio-shell {
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .portfolio-shell .la-sidebar {
+        padding: var(--la-4);
+        max-height: 35dvh;
+    }
+
+    .portfolio-shell .la-nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-shell .la-brandlockup {
+        padding-bottom: var(--la-3);
+    }
+
+    .portfolio-shell .la-nav-section {
+        margin-top: var(--la-3);
+    }
+
+    .portfolio-shell .la-sidebar-note {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .portfolio-shell .la-topbar {
+        padding-block: var(--la-1);
+    }
+}
