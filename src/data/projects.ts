@@ -3,7 +3,6 @@ export interface ProjectImage {
   alt: string;
   width: number;
   height: number;
-  fit?: 'cover' | 'contain';
 }
 
 export interface Project {
@@ -29,7 +28,7 @@ export const projects: Project[] = [
     title: 'TinyNetUse',
     description: 'A Windows utility for monitoring upload and download speeds in a movable desktop overlay, with an optional history graph and configurable appearance.',
     image: {
-      src: '/images/projects/tinynetuse.png',
+      src: '/images/projects/tinynetuse.webp',
       alt: 'TinyNetUse desktop overlay showing current download and upload speeds.',
       width: 744,
       height: 360,
@@ -43,11 +42,10 @@ export const projects: Project[] = [
     title: 'Course Headcounts',
     description: 'A web app for searching and analyzing MSUM course enrollment. I contributed to the front-end redesign and handled Docker deployment, infrastructure, and the data pipeline.',
     image: {
-      src: '/images/projects/course-headcounts.png',
+      src: '/images/projects/course-headcounts.webp',
       alt: 'Course Headcounts project banner with a graduation-cap symbol.',
       width: 2172,
       height: 724,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/headcounts-web',
     liveUrl: 'https://ash.mnstate.edu/',
@@ -57,7 +55,7 @@ export const projects: Project[] = [
     title: 'Dark Souls III Reinforcement Learning',
     description: 'A PPO training environment for the Iudex Gundyr boss fight. Reads game state through memory pointers and automates actions and episode resets. Developed from a class collaboration.',
     image: {
-      src: '/images/projects/DSIII.png',
+      src: '/images/projects/DSIII.webp',
       alt: 'Dark Souls III running beside the training code, console output, and Cheat Engine game-state tools.',
       width: 1920,
       height: 1080,
@@ -69,11 +67,10 @@ export const projects: Project[] = [
     title: 'LA UI',
     description: 'My reusable CSS design system for application interfaces. Shared tokens, layouts, and components keep styling consistent across projects, including this portfolio.',
     image: {
-      src: '/images/projects/la-ui.png',
+      src: '/images/projects/la-ui.webp',
       alt: 'LA UI logo and style guide wordmark.',
       width: 400,
       height: 132,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/LA_UI',
     liveUrl: 'https://laween.dev/LA_UI/',
@@ -83,11 +80,10 @@ export const projects: Project[] = [
     title: 'ACM Interactive Display',
     description: 'A campus-themed game for the MSUM Computer Science hallway display. Players guide the ACM mascot past moving obstacles using keyboard or touch-pad controls.',
     image: {
-      src: '/images/projects/acm.png',
+      src: '/images/projects/acm.webp',
       alt: 'ACM Interactive Display project banner with the ACM mascot.',
       width: 400,
       height: 132,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/acm-interactive-display',
     order: 5,
@@ -96,11 +92,10 @@ export const projects: Project[] = [
     title: 'Collaborative Chess Voting System',
     description: 'An asynchronous team chess system used at MSUM. Players vote on moves to make decisions together during a shared game.',
     image: {
-      src: '/images/projects/chess.png',
+      src: '/images/projects/chess.webp',
       alt: 'Collaborative Chess Voting System interface showing a chessboard and voting options.',
       width: 400,
       height: 132,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
     order: 6,
@@ -109,11 +104,10 @@ export const projects: Project[] = [
     title: 'ReqWatcher',
     description: 'A command-line tool that records installed Python packages in a requirements file, with configurable output, package listing, and undo support.',
     image: {
-      src: '/images/projects/reqwatcher.png',
+      src: '/images/projects/reqwatcher.webp',
       alt: 'ReqWatcher command-line tool interface.',
       width: 400,
       height: 132,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/reqwatcher',
     order: 7,
@@ -122,11 +116,10 @@ export const projects: Project[] = [
     title: 'Sudoku Solver',
     description: 'A Python backtracking solver with step-by-step console visualization, puzzle validation, and several ways to enter a puzzle.',
     image: {
-      src: '/images/projects/Sudoku.png',
+      src: '/images/projects/Sudoku.webp',
       alt: 'Sudoku puzzle being solved step-by-step in the console.',
       width: 400,
       height: 132,
-      fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/sudoku_solver',
     order: 8,

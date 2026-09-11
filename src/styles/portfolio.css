@@ -283,10 +283,6 @@
     object-position: center;
 }
 
-.portfolio-project-image--contain {
-    object-fit: contain;
-}
-
 .portfolio-project-body {
     display: flex;
     flex: 1;
