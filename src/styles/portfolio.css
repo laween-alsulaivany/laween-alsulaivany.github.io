@@ -386,6 +386,21 @@
 }
 
 @media (max-width: 720px) {
+
+    @media (max-width: 720px) {
+    .portfolio-shell {
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .portfolio-shell .la-sidebar {
+        padding: var(--la-4);
+        max-height: none;
+    }
+
+    .portfolio-shell .la-sidebar-note {
+        display: none;
+    }
+
     .portfolio-shell .la-sidebar {
         padding: var(--la-4);
         max-height: none;
