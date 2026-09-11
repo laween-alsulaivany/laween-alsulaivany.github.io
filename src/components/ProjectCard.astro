@@ -31,9 +31,9 @@ const { project } = Astro.props;
     <p class="portfolio-project-description">{project.description}</p>
     <!-- project links -->
 <div class="la-button-row portfolio-project-actions">
-      <a class="la-btn la-btn-secondary la-btn-sm" href={project.repoUrl} aria-label={`${project.title} on GitHub`}>GitHub <span aria-hidden="true">↗</span></a>
-      {project.liveUrl && <a class="la-btn la-btn-secondary la-btn-sm" href={project.liveUrl} aria-label={`Open ${project.title}`}>Live <span aria-hidden="true">↗</span></a>}
-      {project.downloadUrl && <a class="la-btn la-btn-secondary la-btn-sm" href={project.downloadUrl} aria-label={`${project.title} ${project.downloadLabel ?? 'Download'}`}>{project.downloadLabel ?? 'Download'} <span aria-hidden="true">↗</span></a>}
+      <a class="la-btn la-btn-secondary la-btn-sm" href={project.repoUrl} aria-label={`${project.title} on GitHub`}>GitHub</a>
+      {project.liveUrl && <a class="la-btn la-btn-secondary la-btn-sm" href={project.liveUrl} aria-label={`Open ${project.title}`}>Live</a>}
+      {project.downloadUrl && <a class="la-btn la-btn-secondary la-btn-sm" href={project.downloadUrl} aria-label={`${project.title} ${project.downloadLabel ?? 'Download'}`}>{project.downloadLabel ?? 'Download'}</a>}
     </div>
   </div>
 </article>
