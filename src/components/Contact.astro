@@ -1,0 +1,25 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="contact" class="la-stack" aria-labelledby="contact-title">
+  <!-- contact heading -->
+
+  <h2 id="contact-title" class="la-m-0">
+    Contact
+  </h2>
+
+  <p class="la-muted">
+    Connect with me on LinkedIn or explore my work on GitHub.
+  </p>
+    <!-- contact links -->
+  <div class="la-button-row">
+    <a class="la-btn la-btn-primary" href={profile.linkedin}>
+      LinkedIn <span aria-hidden="true">↗</span>
+    </a>
+
+    <a class="la-btn la-btn-secondary" href={profile.github}>
+      GitHub <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+---
+import { profile } from '../data/profile';
+---
+
+<div>
+  <!-- about copy -->
+  <div class="la-content--prose">
+    {profile.about.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</div>

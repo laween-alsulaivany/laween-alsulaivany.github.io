@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppShell from '../components/AppShell.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<BaseLayout pageTitle="About me">
+  <AppShell currentPage="about">
+    <!-- about page heading -->
+    <h1 class="la-m-0 la-mb-6">About me</h1>
+    <!-- about page content -->
+    <div class="la-split-aside la-split-aside--narrow">
+      <div>
+        <!-- about text -->
+        <About />
+        <!-- contact section -->
+        <Contact />
+      </div>
+      <!-- about illustration -->
+      <svg viewBox="0 0 320 360" fill="none" aria-hidden="true" focusable="false">
+        <g stroke="var(--la-border)">
+          <path d="M40 40h240v280H40zM20 180h280M160 20v320" />
+          <circle cx="160" cy="180" r="100" />
+          <path d="M32 40h16M40 32v16M272 320h16M280 312v16" stroke="var(--la-brand-border)" />
+        </g>
+        <image href="/brand-mark.svg" x="117" y="126" width="86" height="107" opacity="0.75" />
+      </svg>
+    </div>
+  </AppShell>
+</BaseLayout>
