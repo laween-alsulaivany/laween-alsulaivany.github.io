@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Astro and TypeScript.
 
-**Live site:** https://laween-alsulaivany.github.io/
+**Live site:** https://laween.dev/
 
 The site includes my education and experience, projects, and background.
 
