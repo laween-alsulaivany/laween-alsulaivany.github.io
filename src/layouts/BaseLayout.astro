@@ -7,9 +7,16 @@ interface Props {
 }
 
 const { pageTitle } = Astro.props;
-const title = pageTitle ? `${pageTitle} | Laween Al-Sulaivany` : 'Laween Al-Sulaivany | Software Developer';
+
+const title = pageTitle
+  ? `${pageTitle} | Laween Al-Sulaivany`
+  : 'Laween Al-Sulaivany | Software Developer';
+
+const description =
+  'I like figuring out how things work, finding what could be better, and making it better.';
+
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const description = 'I like figuring out how things work, finding what could be better, and then make it better.';
+const socialImage = new URL('/social-card.png', Astro.site);
 ---
 
 <!doctype html>
@@ -20,15 +27,40 @@ const description = 'I like figuring out how things work, finding what could be 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#11171d" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
+
+    <!-- sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <!-- social sharing metadata -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Laween Al-Sulaivany" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+
+    <meta property="og:image" content={socialImage.href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Laween Al-Sulaivany — Software Developer"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage.href} />
+    <meta
+      name="twitter:image:alt"
+      content="Laween Al-Sulaivany — Software Developer"
+    />
+
     <title>{title}</title>
   </head>
+
   <body>
     <!-- route content -->
     <slot />
