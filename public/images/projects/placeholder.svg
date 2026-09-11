@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title">
+  <title id="title">Project image placeholder</title>
+  <rect width="800" height="450" fill="#141b22" />
+  <g fill="none" stroke="#2a3541" stroke-width="2">
+    <rect x="310" y="120" width="180" height="140" rx="6" />
+    <path d="m325 245 48-54 34 32 31-38 37 60" />
+    <circle cx="447" cy="152" r="12" />
+  </g>
+  <text x="400" y="310" text-anchor="middle" fill="#9aa8b8" font-family="Arial, sans-serif" font-size="22">Project image coming soon</text>
+</svg>

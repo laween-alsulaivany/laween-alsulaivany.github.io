@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppShell from '../components/AppShell.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+---
+
+<BaseLayout pageTitle="Projects">
+  <AppShell currentPage="projects">
+    <!-- full projects list -->
+    <ProjectGrid />
+  </AppShell>
+</BaseLayout>

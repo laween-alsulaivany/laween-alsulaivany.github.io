@@ -1,0 +1,26 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { projects } from '../data/projects';
+
+interface Props {
+  featured?: boolean;
+}
+
+const { featured = false } = Astro.props;
+const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
+const visibleProjects = featured ? orderedProjects.slice(0, 4) : orderedProjects;
+const Heading = featured ? 'h2' : 'h1';
+---
+
+<div aria-labelledby="projects-title">
+  <!-- projects heading -->
+  <div class="la-page-header">
+    <Heading id="projects-title" class="la-m-0">Projects</Heading>
+    <!-- full projects link -->
+    {featured && <a class="la-btn la-btn-link" href="/projects/">View all projects</a>}
+  </div>
+  <!-- project cards -->
+<div class="la-card-grid portfolio-project-grid">
+    {visibleProjects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</div>
