@@ -39,13 +39,13 @@ export const experience: ExperienceEntry[] = [
   },
   {
     title: 'Undergraduate Research',
-    organization: 'Computer Science',
+    organization: 'Minnesota State University Moorhead',
     period: 'December 2024 – May 2025',
     description: 'Investigated Function-as-a-Service performance across edge and cloud environments, with a focus on benchmarking, latency, and scalability.',
   },
   {
-    title: 'ACM Club',
-    organization: 'Technical workshops and activities',
+    title: 'ACM President',
+    organization: 'Minnesota State University Moorhead - ACM',
     period: 'January 2024 – January 2026',
     description: 'Led more than 10 technical workshops, programming competitions, resume clinics, and project-based activities.',
   },
