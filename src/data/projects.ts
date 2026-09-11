@@ -50,6 +50,7 @@ export const projects: Project[] = [
       fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/headcounts-web',
+    liveUrl: 'https://ash.mnstate.edu/',
     order: 2,
   },
   {
@@ -75,6 +76,7 @@ export const projects: Project[] = [
       fit: 'contain',
     },
     repoUrl: 'https://github.com/laween-alsulaivany/LA_UI',
+    liveUrl: 'https://laween-alsulaivany.github.io/LA_UI/',
     order: 4,
   },
   {
