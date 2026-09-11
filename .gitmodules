@@ -1,0 +1,3 @@
+[submodule "vendor/LA_UI"]
+	path = vendor/LA_UI
+	url = https://github.com/laween-alsulaivany/LA_UI.git
