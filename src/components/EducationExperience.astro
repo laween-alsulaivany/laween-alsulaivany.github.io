@@ -1,0 +1,46 @@
+---
+import { education, experience } from '../data/experience';
+
+const groups = [
+  { title: 'Education', entries: education },
+  { title: 'Experience', entries: experience },
+];
+---
+
+<div aria-labelledby="education-experience-title">  <h1 id="education-experience-title" class="la-sr-only">Education & Experience</h1>
+  <!-- education and experience groups -->
+  <div class="la-grid-2">
+    {groups.map(({ title, entries }) => (
+      <div>
+        <!-- group heading -->
+        <h2 class="la-m-0 la-mb-4">{title}</h2>
+        <!-- group entries -->
+        <ol class="la-timeline portfolio-timeline">
+          {entries.map((entry) => (
+            <li>
+              <span class="la-timeline-dot"></span>
+
+              <div class="la-timeline-body">
+                <p class="la-timeline-meta">{entry.period}</p>
+
+                <h3 class="la-timeline-title">
+                  {entry.title}
+                </h3>
+
+                <p class="la-muted la-small la-mt-2">
+                  {entry.organization}
+                </p>
+
+                {entry.description && (
+                  <p class="la-muted la-small la-mt-2">
+                    {entry.description}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </div>
+</div>
