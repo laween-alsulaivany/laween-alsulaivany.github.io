@@ -89,6 +89,18 @@ export const projects: Project[] = [
     order: 5,
   },
   {
+    title: 'Football-cli',
+    description: 'A command-line interface for keeping up with football games and your favorite teams.',
+    image: {
+      src: '/images/projects/football.png',
+      alt: 'Football-cli project banner.',
+      width: 400,
+      height: 132,
+    },
+    repoUrl: 'https://github.com/laween-alsulaivany/football-cli',
+    order: 5,
+  },
+  {
     title: 'Collaborative Chess Voting System',
     description: 'An asynchronous team chess system used at MSUM. Players vote on moves to make decisions together during a shared game.',
     image: {
