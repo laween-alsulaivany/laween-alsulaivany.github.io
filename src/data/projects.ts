@@ -93,12 +93,36 @@ export const projects: Project[] = [
     description: 'A command-line interface for keeping up with football games and your favorite teams.',
     image: {
       src: '/images/projects/football.png',
-      alt: 'Football-cli project banner.',
+      alt: 'Football-cli terminal screenshot.',
       width: 400,
       height: 132,
     },
     repoUrl: 'https://github.com/laween-alsulaivany/football-cli',
     order: 5,
+  },
+  {
+    title: 'Should I Care?',
+    description: 'A small web app for figuring out whether a message, email, notice, or other chunk of text actually needs your attention.',
+    image: {
+      src: '/images/projects/shouldicare.png',
+      alt: 'Should I Care? project icon.',
+      width: 400,
+      height: 132,
+    },
+    repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
+    order: 6,
+  },
+  {
+    title: 'wherewasi',
+    description: 'A tiny CLI tool that remembers where you left off.',
+    image: {
+      src: '/images/projects/wherewasi.png',
+      alt: 'wherewasi terminal screenshot.',
+      width: 400,
+      height: 132,
+    },
+    repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
+    order: 6,
   },
   {
     title: 'Collaborative Chess Voting System',
