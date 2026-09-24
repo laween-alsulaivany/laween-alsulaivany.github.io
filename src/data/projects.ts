@@ -12,7 +12,7 @@ export interface Project {
   repoUrl: string;
   liveUrl?: string;
   downloadUrl?: string;
-  downloadLabel?: 'Download' | 'Releases';
+  downloadLabel?: 'Download' | 'Releases' | 'PyPI';
   order: number;
 }
 
@@ -98,7 +98,7 @@ export const projects: Project[] = [
       height: 132,
     },
     repoUrl: 'https://github.com/laween-alsulaivany/football-cli',
-    order: 5,
+    order: 6,
   },
   {
     title: 'Should I Care?',
@@ -109,21 +109,24 @@ export const projects: Project[] = [
       width: 400,
       height: 132,
     },
-    repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
-    order: 6,
+    repoUrl: 'https://github.com/laween-alsulaivany/shouldicare',
+    liveUrl: 'https://shouldicare.laween.dev/',
+    order: 7,
   },
-  {
-    title: 'wherewasi',
-    description: 'A tiny CLI tool that remembers where you left off.',
-    image: {
-      src: '/images/projects/wherewasi.png',
-      alt: 'wherewasi terminal screenshot.',
-      width: 400,
-      height: 132,
-    },
-    repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
-    order: 6,
+{
+  title: 'wherewasi',
+  description: 'A tiny CLI tool that remembers where you left off.',
+  image: {
+    src: '/images/projects/wherewasi.png',
+    alt: 'wherewasi terminal screenshot.',
+    width: 400,
+    height: 132,
   },
+  repoUrl: 'https://github.com/laween-alsulaivany/wherewasi',
+  downloadUrl: 'https://pypi.org/project/wherewasi-cli/',
+  downloadLabel: 'PyPI',
+  order: 8,
+},
   {
     title: 'Collaborative Chess Voting System',
     description: 'An asynchronous team chess system used at MSUM. Players vote on moves to make decisions together during a shared game.',
@@ -134,7 +137,7 @@ export const projects: Project[] = [
       height: 132,
     },
     repoUrl: 'https://github.com/laween-alsulaivany/CCVS',
-    order: 6,
+    order: 9,
   },
   {
     title: 'ReqWatcher',
@@ -146,7 +149,7 @@ export const projects: Project[] = [
       height: 132,
     },
     repoUrl: 'https://github.com/laween-alsulaivany/reqwatcher',
-    order: 7,
+    order: 10,
   },
   {
     title: 'Sudoku Solver',
@@ -158,6 +161,6 @@ export const projects: Project[] = [
       height: 132,
     },
     repoUrl: 'https://github.com/laween-alsulaivany/sudoku_solver',
-    order: 8,
+    order: 11,
   },
 ];
